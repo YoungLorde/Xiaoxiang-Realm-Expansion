@@ -1,0 +1,38 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  NOTHING IS PUBLISHED UNLESS IT IS NAMED BELOW.
+#
+#  This file works the opposite way round from a normal .gitignore. Instead of
+#  listing what to leave out, it excludes everything and then names the few
+#  things allowed back in.
+#
+#  That direction is deliberate. A list of exclusions has to be updated every
+#  time a file is added, and the day somebody forgets is the day something
+#  private is published - permanently, because a public git history cannot be
+#  taken back. With this direction, forgetting means a file is NOT published,
+#  which is the safe way to be wrong.
+#
+#  Published: the read-me, the changelogs, the licence, and whatever is put in
+#  release/. Not published: source, notes, plans, tooling, build scripts,
+#  archives, and anything else on this disk.
+# ═══════════════════════════════════════════════════════════════════════════
+
+# Everything.
+/*
+
+# The exceptions, and there are only these.
+!/.gitignore
+!/README.md
+!/CHANGELOG_*.md
+!/LICENSE
+!/release/
+
+# ── release/ ───────────────────────────────────────────────────────────────
+# The build script puts the current release's jar and its notes here, and
+# nothing else goes in. Do NOT put the sources jar or the source zip in here:
+# both hold the entire source tree.
+
+# ── A note on history ──────────────────────────────────────────────────────
+# This file governs what is committed from now on. It does NOT remove anything
+# that was committed before it existed. If a previous push put source, notes or
+# tooling on the remote, all of that is still in the history and still public,
+# and only rewriting that history removes it.
